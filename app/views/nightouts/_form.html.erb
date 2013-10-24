@@ -1,5 +1,7 @@
+
 <%= flash[:error] if flash[:error] %>
-<%= form_for @nightouts do  |f|  %>
+<%= params.inspect %>
+<%= form_for @nightout do  |f|  %>
 
     <%= f.label "Total price" %> <br>
     <%= f.text_field :total_amount %><br>

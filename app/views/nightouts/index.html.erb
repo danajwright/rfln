@@ -1,19 +1,3 @@
-<%= link_to "New Nightout", new_nightout_path %>
-
-<% @nightouts.each do |nightout| %>
-    <div>
-      <div>
-          <h1><%= nightout.headline %></h1>
-      </div>
-      <div>
-          <p> <%= nightout.description %></p>
-      </div>
-    </div>
-
-    <%= image_tag nightout.receipt.url() %>
-
-    <%= link_to "Edit", edit_nightout_path(nightout)%>
-
-    <%= link_to "Delete", nightout_path(nightout), :method => :delete,:confirm => "Are you sure you want to delete?" %>
-
+<% @nightouts.reverse.each do |nightout| %>
+  <%= render partial: "blogpost", locals: {nightout: nightout} %>
 <% end %>

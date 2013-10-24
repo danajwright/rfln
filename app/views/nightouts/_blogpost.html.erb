@@ -1,0 +1,44 @@
+
+<div id="post">
+  <div id="vote">
+    <div id="chicklet">
+      <%= nightout.total_amount %>
+    </div>
+    <ul id="vote-links">
+      <li><p><a href="#">Great night<span class="glyphicon glyphicon-thumbs-up"></span></a></p>
+      </li>
+      <li><p><a href="#">Terrible night<span class="glyphicon glyphicon-thumbs-down"></span></a></p>
+      </li>
+    </ul>
+  </div>
+  <div id="headline">
+    <a href="#"><h2><%= link_to nightout.headline, nightout %></h2>
+  </div>
+  <div id="receipt">
+    <%= image_tag nightout.receipt.url() %>
+  </div>
+  <div id="description">
+    <p> <%= nightout.description %> </p>
+  </div>
+  <div>
+    <%= link_to "Edit", edit_nightout_path(nightout)%>
+  </div>
+  <div>
+    <%= link_to "Delete", nightout_path(nightout), :method => :delete,:confirm => "Are you sure you want to delete?" %>
+  </div>
+  <ul>
+    <li><a href="javascript:void(0);" class="badge-facebook-share badge-evt badge-track facebook" data-track="social,fb.s,,,d,a5dR2WO,l" data-evt="Facebook-Share,ListClicked,http://9gag.com/gag/a5dR2WO" data-share="http://9gag.com/gag/a5dR2WO?ref=fb.s">Share on Facebook</a></li>
+
+    <li><a href="javascript:void(0);" class="badge-twitter-share badge-evt badge-track twitter" data-track="social,t.s,,,d,a5dR2WO,l" data-evt="Twitter-Share,ListClicked,http://9gag.com/gag/a5dR2WO" data-title="This%20is%20a%202400x26%20cable%20used%20in%20telecommunications" data-share="http://9gag.com/gag/a5dR2WO?ref=t">Tweet this</a>
+    </li>
+
+    <li><a href="javascript:void(0);" class="badge-gplus-share badge-evt badge-track google-plus" data-track="social,gp.s,,,d,a5dR2WO,l" data-evt="GPlus-Share,ListClicked,http://9gag.com/gag/a5dR2WO" data-share="http://9gag.com/gag/a5dR2WO?ref=gp">Google+</a>
+    </li>
+
+    <li><a href="javascript:void(0);" class="badge-pinterest-share badge-evt badge-track pinterest" data-track="social,pn.s,,,d,a5dR2WO,l" data-evt="Pinterest-Share,ListClicked,http://9gag.com/gag/a5dR2WO" data-title="This%20is%20a%202400x26%20cable%20used%20in%20telecommunications" data-img="http://d24w6bsrhbeh9d.cloudfront.net/photo/a5dR2WO_700b.jpg" data-share="http://9gag.com/gag/a5dR2WO?ref=pn">Pin it</a>
+    </li>
+
+    <li><a href="mailto:?subject=Check%20out%20%22This%20is%20a%202400x26%20cable%20used%20in%20telecommunications%22&amp;body=This%20is%20funny%2C%20you%20must%20check%20it%20out%21%20%3AD%0AThis%20is%20a%202400x26%20cable%20used%20in%20telecommunications%0Ahttp%3A%2F%2F9gag.com%2Fgag%2Fa5dR2WO%3Fref%3D9g.m" class="badge-email-share badge-evt badge-track email" data-track="social,9g.m,,,d,a5dR2WO,l" data-evt="Email-Share,ListClicked,http://9gag.com/gag/a5dR2WO" target="_blank">Share with Email</a>
+    </li>
+  </ul>
+</div>

@@ -34,6 +34,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'pry'
   gem 'pry-rails'
+  gem 'quiet_assets'
 end
 
 # To use ActiveModel has_secure_password
