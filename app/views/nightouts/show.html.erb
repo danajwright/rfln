@@ -1,0 +1,12 @@
+Your <b>"<%= @nightout.headline %>"</b> record was saved!<br>
+<br>
+<br>
+Here it is:<br>
+<br>
+
+<h2><%= @nightout.headline %></h2><br>
+<p><%= @nightout.description %></p><br>
+
+<%= image_tag @nightout.receipt.url(), :class => "img_preview" %>
+
+<%= link_to "back to all nightouts", nightout_path %>

@@ -1,0 +1,30 @@
+<% @nightouts.each do |nightout| %>
+  <div id="post">
+    <div id="vote">
+      <div id="chicklet">
+        <%= nightout.total_amount %>
+      </div>
+      <ul id="vote-links">
+        <li><p><a href="#">Great night<span class="glyphicon glyphicon-thumbs-up"></span></a></p>
+        </li>
+        <li><p><a href="#">Terrible night<span class="glyphicon glyphicon-thumbs-down"></span></a></p>
+        </li>
+      </ul>
+    </div>
+    <div id="headline">
+      <a href="#"><h2><%= nightout.headline %></h2>
+    </div>
+    <div id="receipt">
+      <%= image_tag nightout.receipt.url() %>
+    </div>
+    <div id="description">
+      <p> <%= nightout.description %> </p>
+    </div>
+    <div>
+      <%= link_to "Edit", edit_nightout_path(nightout)%>
+    </div>
+    <div>
+      <%= link_to "Delete", nightout_path(nightout), :method => :delete,:confirm => "Are you sure you want to delete?" %>
+    </div>
+  </div>
+<% end %>

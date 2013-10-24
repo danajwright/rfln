@@ -1,0 +1,49 @@
+<Doctype html>
+<html>
+<head>
+  <title>Receipts FLN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    "application" %>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Neue Helvetica">
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-sm-4 col-dstyle">
+      <div class="page-header">
+        <div id="head-container">
+          <a href="#"><%= image_tag "rflnlogo4.png" %></a>
+        </div>
+      </div>
+      <div id="button-container">
+        <% if current_user %>
+          <p>Welcome <%= current_user.name %>!</p>
+          <p><%= link_to "Sign Out", signout_path %></p>
+        <% else %>
+          <%= link_to "Twitter login", "/auth/twitter" %>
+        <% end %>
+        <p>You threw large, and here's the proof..</p>
+        <button type="button" class="btn btn-default btn-lg">Upload a Receipt
+        </button>
+      </div>
+      <div id="sort-container">
+        <div id="sort">
+          <p><a href="#">Best nights<span class="glyphicon glyphicon-thumbs-up"></span></a></p>
+          <p><a href="#">Worst nights<span class="glyphicon glyphicon-thumbs-down"></span></a></p>
+          <p><a href="#">Most shared<span class="glyphicon glyphicon-fire"></span></a></p>
+        </div>
+      </div>
+      <div id="search-container">
+        <div id="search-box">
+          <form id="search" method="get" action="">
+              <span class="glyphicon glyphicon-search"></span>
+              <input span="searchinput" type="text" placeholder="SEARCH">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8 well">
+      <%= render "blogroll" %>
+    </div>
+  </div>
+</body>

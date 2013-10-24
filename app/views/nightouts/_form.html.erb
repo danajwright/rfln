@@ -1,0 +1,14 @@
+<%= flash[:error] if flash[:error] %>
+<%= form_for @nightouts do  |f|  %>
+
+    <%= f.label "Total price" %> <br>
+    <%= f.text_field :total_amount %><br>
+    <%= f.label "Receipt" %><br>
+    <%= f.file_field :receipt %><br>
+    <%= f.label "Headline" %> <br>
+    <%= f.text_field :headline %><br>
+    <%= f.label "Description" %> <br>
+    <%= f.text_field :description %><br>
+    <%= f.submit %>
+
+<% end %>
