@@ -18,13 +18,13 @@
     <%= image_tag nightout.receipt.url() %>
   </div>
   <div id="description">
-    <p> <%= nightout.description %> </p>
+    <p> <%= nightout.caption1 %> </p>
   </div>
   <div>
-    <%= link_to "Edit", edit_nightout_path(nightout)%>
+    <%= link_to "Edit", edit_nightout_path(nightout), class: "button btn btn-default"%>
   </div>
   <div>
-    <%= link_to "Delete", nightout_path(nightout), :method => :delete,:confirm => "Are you sure you want to delete?" %>
+    <%= button_to "Delete", nightout_path(nightout), class: "button btn btn-default", :method => :delete,:confirm => "Are you sure you want to delete?" %>
   </div>
   <ul>
     <li><a href="javascript:void(0);" class="badge-facebook-share badge-evt badge-track facebook" data-track="social,fb.s,,,d,a5dR2WO,l" data-evt="Facebook-Share,ListClicked,http://9gag.com/gag/a5dR2WO" data-share="http://9gag.com/gag/a5dR2WO?ref=fb.s">Share on Facebook</a></li>

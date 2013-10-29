@@ -8,6 +8,6 @@ class Nightout < ActiveRecord::Base
   has_attached_file :receipt
 
   validates :total_amount, presence: :true
-  validates :receipt, presence: :true
+  validates :pic1, presence: :true
 
 end

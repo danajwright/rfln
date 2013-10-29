@@ -1,0 +1,3 @@
+
+  <p><%= f.file_field :receipt %></p>
+  <p/><%= f.text_field :description, :placeholder => "Caption" %></p>

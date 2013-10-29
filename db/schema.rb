@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131024003954) do
+ActiveRecord::Schema.define(:version => 20131025134437) do
 
   create_table "nightouts", :force => true do |t|
     t.string   "headline"
@@ -40,6 +40,11 @@ ActiveRecord::Schema.define(:version => 20131024003954) do
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
+  end
+
+  create_table "votes", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "votings", :force => true do |t|

@@ -4,7 +4,6 @@ class NightoutsController < ApplicationController
 
   def index
       @nightouts = Nightout.all
-      puts "$$$$$$$$$$$ @nightouts: #{@nighouts}"
   end
 
   def show
@@ -30,10 +29,10 @@ class NightoutsController < ApplicationController
 
   def update
     # find my sample to be updated
-    updated_@nightout = Nightout.find(params[:id])
+    @nightout = Nightout.find(params[:id])
     # update
-    updated_@nightout = found_nightout.updates_attributes(params[:nightout])
-    redirect_to_nightout_path(updated_nightout)
+    @nightout.update_attributes(params[:nightout])
+    redirect_to nightout_path(@nightout)
   end
 
   def destroy

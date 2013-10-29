@@ -1,16 +1,37 @@
 
 <%= flash[:error] if flash[:error] %>
-<%= params.inspect %>
 <%= form_for @nightout do  |f|  %>
 
-    <%= f.label "Total price" %> <br>
-    <%= f.text_field :total_amount %><br>
-    <%= f.label "Receipt" %><br>
-    <%= f.file_field :receipt %><br>
-    <%= f.label "Headline" %> <br>
-    <%= f.text_field :headline %><br>
-    <%= f.label "Description" %> <br>
-    <%= f.text_field :description %><br>
-    <%= f.submit %>
+  <p><%= f.text_field :total_amount, :placeholder => "Total price" %></p>
+
+  <p><%= f.text_field :headline, :placeholder => "Headline" %><p/>
+
+  <p><%= f.file_field :receipt %></p>
+
+  <p/><%= f.text_field :caption1, :placeholder => "Caption" %></p>
+
+  <p><%= f.file_field :receipt %></p>
+
+  <p/><%= f.text_field :description, :placeholder => "Optional caption" %></p>
+
+  <p><%= f.file_field :receipt %></p>
+
+  <p/><%= f.text_field :description, :placeholder => "Optional caption" %></p>
+
+  <p><%= f.file_field :receipt %></p>
+
+  <p/><%= f.text_field :description, :placeholder => "Optional caption" %></p>
+
+  <p><%= f.file_field :receipt %></p>
+
+  <p/><%= f.text_field :description, :placeholder => "Optional caption" %></p>
+
+  <p><%= f.file_field :receipt %></p>
+
+  <p/><%= f.text_field :description, :placeholder => "Optional caption" %></p>
+
+  <%= f.submit %>
 
 <% end %>
+
+
